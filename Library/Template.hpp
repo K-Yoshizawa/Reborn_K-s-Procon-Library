@@ -26,6 +26,8 @@ inline string Yn(bool flag){return (flag) ? "Yes" : "No";}
 inline bool YnPrint(bool flag){cout << Yn(flag) << endl;return flag;}
 inline string YN(bool flag){return (flag) ? "YES" : "NO";}
 inline bool YNPrint(bool flag){cout << YN(flag) << endl;return flag;}
+template<class ValueType, class ExceptType>
+inline bool ExceptPrint(ValueType &val, ValueType cond, ExceptType except){if(val != cond){cout << val << endl; return true;}else{cout << except << endl; return false;}}
 template<class T>
 bool chmin(T &src, const T &cmp){if(src > cmp){src = cmp; return true;}return false;}
 template<class T>
@@ -36,8 +38,6 @@ template<typename T>
 inline bool ingrid(T y, T x, T ymax, T xmax){return between(0, y, ymax - 1) && between(0, x, xmax - 1);}
 template<typename T>
 inline T median(T a, T b, T c){return between(b, a, c) || between(c, a, b) ? a : (between(a, b, c) || between(c, b, a) ? b : c);}
-template<typename T>
-inline T except(T src, T cond, T excp){return (src == cond ? excp : src);}
 template<typename T>
 inline T min(vector<T> &v){return *min_element((v).begin(), (v).end());}
 template<typename T>
