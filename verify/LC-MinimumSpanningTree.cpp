@@ -1,4 +1,5 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/minimum_spanning_tree"
+// #define PROBLEM "https://judge.yosupo.jp/problem/minimum_spanning_tree"
+#define IGNORE
 
 #include "../Library/Template.hpp"
 #include "../Library/Graph/Kruskal.hpp"

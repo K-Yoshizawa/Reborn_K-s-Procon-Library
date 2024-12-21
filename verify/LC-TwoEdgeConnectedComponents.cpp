@@ -1,4 +1,5 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/two_edge_connected_components"
+// #define PROBLEM "https://judge.yosupo.jp/problem/two_edge_connected_components"
+#define IGNORE
 
 #include "../Library/Template.hpp"
 #include "../Library/Graph/TwoEdgeConnectedComponents.hpp"

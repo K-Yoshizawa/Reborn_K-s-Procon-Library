@@ -1,4 +1,5 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/jump_on_tree"
+// #define PROBLEM "https://judge.yosupo.jp/problem/jump_on_tree"
+#define IGNORE
 
 #include "../Library/Template.hpp"
 #include "../Library/Tree/HeavyLightDecomposition.hpp"
