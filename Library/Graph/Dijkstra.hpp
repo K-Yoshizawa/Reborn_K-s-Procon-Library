@@ -19,10 +19,10 @@ class Dijkstra{
     public:
     Dijkstra(int vertex_size) : graph(vertex_size), dist(vertex_size), prev_vertex(vertex_size){}
     
-    void AddEdge(Vertex from, Vertex to, WeightType weight){
-        graph.at(from).emplace_back(to, weight);
+    void AddEdge(Vertex s, Vertex t, WeightType w){
+        graph.at(s).emplace_back(t, w);
         if(!isDirected){
-            graph.at(to).emplace_back(from, weight);
+            graph.at(t).emplace_back(s, w);
         }
     }
 

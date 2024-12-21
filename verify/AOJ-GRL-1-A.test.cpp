@@ -5,14 +5,16 @@
 
 int main(){
     int V, E, r; cin >> V >> E >> r;
-    Graph<ll> G(V, true);
-    G.InputGraph(E, true, false);
-    
-    Dijkstra dk(G);
-    dk.Solve(r);
+    Dijkstra<ll, true> G(V);
+    for(int i = 0; i < E; ++i){
+        int s, t, d; cin >> s >> t >> d;
+        G.AddEdge(s, t, d);
+    }
+
+    G.Solve(r);
     for(int i = 0; i < V; ++i){
-        if(dk.Reachable(i)){
-            cout << dk.Distance(i) << endl;
+        if(G.Reachable(i)){
+            cout << G.Distance(i) << endl;
         }
         else{
             cout << "INF" << endl;
